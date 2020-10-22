@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+long a,d;
+
+long dzielniki (long x)
+{
+int k=2;
+int ilosc_dzielnikow=0;
+while (x>1)
+{
+while (x%k==0)
+        {
+            x/=k;
+            ilosc_dzielnikow++;
+        }
+        k++;
+}
+return ilosc_dzielnikow;
+}
+
+int main()
+{
+    cin>>d;
+
+    for (long i=1; i<=d; i++)
+    {
+    cin>>a;
+    if (dzielniki(a)==1) cout<<"TAK"<<endl;
+    else cout<<"NIE"<<endl;
+    }
+
+
+    return 0;
+}
